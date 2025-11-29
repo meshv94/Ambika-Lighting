@@ -242,7 +242,7 @@ function initGallery() {
     
     // Gallery data - Videos
     const videosData = [
-        { src: 'https://youtube.com/shorts/w8VGrPWz3oI?si=6pStnldmzoW2gtue', category: 'wedding', title: 'Wedding Highlights' },
+        { src: 'https://www.youtube.com/embed/w8VGrPWz3oI', category: 'wedding', title: 'Wedding Highlights' },
         // { src: 'https://www.youtube.com/embed/dQw4w9WgXcQ', category: 'garba', title: 'Garba Night' },
         // { src: 'https://www.youtube.com/embed/dQw4w9WgXcQ', category: 'reception', title: 'Reception Ceremony' },
         // { src: 'https://www.youtube.com/embed/dQw4w9WgXcQ', category: 'mandap', title: 'Mandap Setup' },
@@ -504,54 +504,62 @@ function openVideoModal(src, title) {
     const videoFrame = document.getElementById('videoFrame');
     const videoError = document.getElementById('videoError');
     const youtubeLink = document.getElementById('youtubeLink');
-    
+
     // Hide error message initially
     if (videoError) {
         videoError.classList.add('hidden');
     }
-    
-    // Add autoplay parameter to YouTube URL
-    let videoSrc = src;
-    if (src.includes('youtube.com')) {
-        videoSrc = src.includes('?') ? `${src}&autoplay=1` : `${src}?autoplay=1`;
-    }
-    
-    // Extract video ID for YouTube link fallback
+
+    // Extract video ID from various YouTube URL formats
     let videoId = '';
-    if (src.includes('youtube.com/embed/')) {
+    let embedUrl = src;
+
+    // Handle different YouTube URL formats
+    if (src.includes('youtube.com/shorts/')) {
+        videoId = src.split('youtube.com/shorts/')[1].split('?')[0].split('/')[0];
+        embedUrl = `https://www.youtube.com/embed/${videoId}`;
+    } else if (src.includes('youtube.com/watch?v=')) {
+        videoId = src.split('v=')[1].split('&')[0];
+        embedUrl = `https://www.youtube.com/embed/${videoId}`;
+    } else if (src.includes('youtu.be/')) {
+        videoId = src.split('youtu.be/')[1].split('?')[0];
+        embedUrl = `https://www.youtube.com/embed/${videoId}`;
+    } else if (src.includes('youtube.com/embed/')) {
         videoId = src.split('youtube.com/embed/')[1].split('?')[0];
-    } else if (src.includes('youtube.com/shorts/')) {
-        videoId = src.split('youtube.com/shorts/')[1].split('?')[0];
+        embedUrl = src;
     }
-    
-    // Set YouTube link
+
+    // Add autoplay and other parameters for better embed experience
+    if (embedUrl.includes('youtube.com/embed/')) {
+        const separator = embedUrl.includes('?') ? '&' : '?';
+        embedUrl = `${embedUrl}${separator}autoplay=1&rel=0&modestbranding=1`;
+    }
+
+    // Set YouTube link fallback (prefer shorts if it was a shorts video)
     if (youtubeLink && videoId) {
-        youtubeLink.href = `https://www.youtube.com/shorts/${videoId}`;
+        if (src.includes('/shorts/')) {
+            youtubeLink.href = `https://www.youtube.com/shorts/${videoId}`;
+        } else {
+            youtubeLink.href = `https://www.youtube.com/watch?v=${videoId}`;
+        }
     }
-    
-    videoFrame.src = videoSrc;
+
+    videoFrame.src = embedUrl;
     videoModal.classList.remove('hidden');
     videoModal.classList.add('flex');
     document.body.style.overflow = 'hidden';
-    
+
     // Check for iframe load error
     videoFrame.onerror = function() {
         if (videoError) {
             videoError.classList.remove('hidden');
         }
     };
-    
-    // Also check after a delay if iframe is still loading
+
+    // Detect if video fails to load (some videos have embed restrictions)
     setTimeout(() => {
-        try {
-            // Try to access iframe content - if it fails, show error
-            if (videoFrame.contentWindow === null || videoFrame.contentDocument === null) {
-                // This might indicate an error, but it's not always reliable due to CORS
-                // We'll rely on the user seeing the error message if embed fails
-            }
-        } catch (e) {
-            // Cross-origin error is expected, ignore
-        }
+        // If the iframe hasn't loaded properly, we can't reliably detect it
+        // The error message in the HTML provides a fallback link for users
     }, 2000);
 }
 
