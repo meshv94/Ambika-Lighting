@@ -1,0 +1,21 @@
+# robots.txt for Ambika Lighting Website
+# This file tells search engines which pages to crawl and which to avoid
+
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.ambikalighting.com/sitemap.xml
+
+# Crawl delay (optional, prevents server overload)
+Crawl-delay: 1
+
+# Block specific bad bots (optional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
