@@ -294,6 +294,64 @@ html {
     opacity: 0.1;
 }
 
+/* Work Item Background Image with Gradient Fallback */
+.work-item .aspect-\[4\/3\] {
+    position: relative;
+}
+
+/* Work background image - only show if URL is provided */
+.work-bg-image {
+    z-index: 1;
+}
+
+/* Ensure hover overlay text is always on top of image */
+.work-hover-overlay {
+    z-index: 20 !important;
+}
+
+/* Hide image placeholder icon when image is loaded */
+.work-item .aspect-\[4\/3\]:has(.work-bg-image[style*="background-image: url('')"]) .fa-image {
+    display: block;
+}
+
+.work-item .aspect-\[4\/3\]:has(.work-bg-image[style*="background-image: url('http"]) .fa-image,
+.work-item .aspect-\[4\/3\]:has(.work-bg-image[style*="background-image: url('https"]) .fa-image {
+    display: none;
+}
+
+/* When image URL is provided and valid, show image */
+.work-bg-image[style*="background-image: url('http"],
+.work-bg-image[style*="background-image: url('https"] {
+    display: block;
+}
+
+/* When image URL is empty, hide the image div to show gradient */
+.work-bg-image[style*="background-image: url('')"] {
+    display: none;
+}
+
+/* About Us Section Background Image with Gradient Fallback */
+.about-bg-image {
+    z-index: 1;
+}
+
+/* Hide icon when image is loaded */
+#about .aspect-\[4\/3\]:has(.about-bg-image[style*="background-image: url('http"]) .fa-magic,
+#about .aspect-\[4\/3\]:has(.about-bg-image[style*="background-image: url('https"]) .fa-magic {
+    display: none;
+}
+
+/* When image URL is provided and valid, show image */
+.about-bg-image[style*="background-image: url('http"],
+.about-bg-image[style*="background-image: url('https"] {
+    display: block;
+}
+
+/* When image URL is empty, hide the image div to show gradient */
+.about-bg-image[style*="background-image: url('')"] {
+    display: none;
+}
+
 /* Parallax Effect */
 .parallax {
     transform: translateZ(0);

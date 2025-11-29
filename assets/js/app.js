@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
     initNavbarScroll();
     initSmoothScroll();
+    initAboutVideo();
 });
 
 // ============================================
@@ -220,33 +221,33 @@ function initMobileMenu() {
 function initGallery() {
     // Gallery data - Photos
     const photosData = [
-        { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'wedding', title: 'Wedding Mandap' },
-        { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'flower', title: 'Flower Decoration' },
-        { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'gate', title: 'Gate Decoration' },
-        { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'lighting', title: 'Lighting Setup' },
-        { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'stage', title: 'Stage Decoration' },
-        { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'mandap', title: 'Mandap Design' },
-        { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'reception', title: 'Reception Setup' },
-        { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'rasgarba', title: 'Rasgarba Event' },
-        { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'mehndi', title: 'Mehndi Ceremony' },
-        { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'wedding', title: 'Wedding Decoration' },
-        { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'sangeet-garba', title: 'Sangeet Night' },
-        { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'party-plot', title: 'Party Plot Setup' },
-        { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'flower', title: 'Floral Arrangement' },
-        { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'lighting', title: 'Ambient Lighting' },
-        { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'mandap', title: 'Traditional Mandap' },
-        { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'reception', title: 'Reception Hall' },
-        { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'wedding', title: 'Wedding Stage' },
+        { src: 'https://i.ibb.co/yFrRtg6s/entry.jpg', category: 'gate', title: 'Entry Gate' },
+        { src: 'https://i.ibb.co/VY3t8pPc/mandap-chori.jpg', category: 'mandap', title: 'Traditional Mandap' },
+        // { src: 'https://i.ibb.co/yFrRtg6s/entry.jpg', category: 'wedding', title: 'Wedding Stage' },
+        { src: 'https://i.ibb.co/xtKqbXjz/stage.jpg', category: 'stage', title: 'Stage Decoration' },
+        // { src: 'https://i.ibb.co/V0zCdVpK/reception.jpg', category: 'gate', title: 'Gate Decoration' },
+        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'lighting', title: 'Lighting Setup' },
+        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'stage', title: 'Stage Decoration' },
+        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'reception', title: 'Reception Setup' },
+        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'rasgarba', title: 'Rasgarba Event' },
+        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'mehndi', title: 'Mehndi Ceremony' },
+        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'wedding', title: 'Wedding Decoration' },
+        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'sangeet-garba', title: 'Sangeet Night' },
+        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'party-plot', title: 'Party Plot Setup' },
+        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'flower', title: 'Floral Arrangement' },
+        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'lighting', title: 'Ambient Lighting' },
+        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'mandap', title: 'Traditional Mandap' },
+        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'reception', title: 'Reception Hall' },
     ];
     
     // Gallery data - Videos
     const videosData = [
-        { src: 'https://www.youtube.com/embed/dQw4w9WgXcQ', category: 'wedding', title: 'Wedding Highlights' },
-        { src: 'https://www.youtube.com/embed/dQw4w9WgXcQ', category: 'garba', title: 'Garba Night' },
-        { src: 'https://www.youtube.com/embed/dQw4w9WgXcQ', category: 'reception', title: 'Reception Ceremony' },
-        { src: 'https://www.youtube.com/embed/dQw4w9WgXcQ', category: 'mandap', title: 'Mandap Setup' },
-        { src: 'https://www.youtube.com/embed/dQw4w9WgXcQ', category: 'sangeet-garba', title: 'Sangeet Performance' },
-        { src: 'https://www.youtube.com/embed/dQw4w9WgXcQ', category: 'wedding', title: 'Wedding Video' },
+        { src: 'https://youtube.com/shorts/w8VGrPWz3oI?si=6pStnldmzoW2gtue', category: 'wedding', title: 'Wedding Highlights' },
+        // { src: 'https://www.youtube.com/embed/dQw4w9WgXcQ', category: 'garba', title: 'Garba Night' },
+        // { src: 'https://www.youtube.com/embed/dQw4w9WgXcQ', category: 'reception', title: 'Reception Ceremony' },
+        // { src: 'https://www.youtube.com/embed/dQw4w9WgXcQ', category: 'mandap', title: 'Mandap Setup' },
+        // { src: 'https://www.youtube.com/embed/dQw4w9WgXcQ', category: 'sangeet-garba', title: 'Sangeet Performance' },
+        // { src: 'https://www.youtube.com/embed/dQw4w9WgXcQ', category: 'wedding', title: 'Wedding Video' },
     ];
     
     // Populate photos gallery
@@ -501,6 +502,13 @@ function initVideoModal() {
 function openVideoModal(src, title) {
     const videoModal = document.getElementById('videoModal');
     const videoFrame = document.getElementById('videoFrame');
+    const videoError = document.getElementById('videoError');
+    const youtubeLink = document.getElementById('youtubeLink');
+    
+    // Hide error message initially
+    if (videoError) {
+        videoError.classList.add('hidden');
+    }
     
     // Add autoplay parameter to YouTube URL
     let videoSrc = src;
@@ -508,10 +516,43 @@ function openVideoModal(src, title) {
         videoSrc = src.includes('?') ? `${src}&autoplay=1` : `${src}?autoplay=1`;
     }
     
+    // Extract video ID for YouTube link fallback
+    let videoId = '';
+    if (src.includes('youtube.com/embed/')) {
+        videoId = src.split('youtube.com/embed/')[1].split('?')[0];
+    } else if (src.includes('youtube.com/shorts/')) {
+        videoId = src.split('youtube.com/shorts/')[1].split('?')[0];
+    }
+    
+    // Set YouTube link
+    if (youtubeLink && videoId) {
+        youtubeLink.href = `https://www.youtube.com/shorts/${videoId}`;
+    }
+    
     videoFrame.src = videoSrc;
     videoModal.classList.remove('hidden');
     videoModal.classList.add('flex');
     document.body.style.overflow = 'hidden';
+    
+    // Check for iframe load error
+    videoFrame.onerror = function() {
+        if (videoError) {
+            videoError.classList.remove('hidden');
+        }
+    };
+    
+    // Also check after a delay if iframe is still loading
+    setTimeout(() => {
+        try {
+            // Try to access iframe content - if it fails, show error
+            if (videoFrame.contentWindow === null || videoFrame.contentDocument === null) {
+                // This might indicate an error, but it's not always reliable due to CORS
+                // We'll rely on the user seeing the error message if embed fails
+            }
+        } catch (e) {
+            // Cross-origin error is expected, ignore
+        }
+    }, 2000);
 }
 
 function closeVideoModal() {
@@ -522,6 +563,23 @@ function closeVideoModal() {
     videoModal.classList.add('hidden');
     videoModal.classList.remove('flex');
     document.body.style.overflow = '';
+}
+
+// ============================================
+// About Us Video
+// ============================================
+
+function initAboutVideo() {
+    const aboutVideoThumbnail = document.getElementById('aboutVideoThumbnail');
+    
+    if (aboutVideoThumbnail) {
+        aboutVideoThumbnail.addEventListener('click', () => {
+            // YouTube Shorts videos often have embedding restrictions
+            // Open directly on YouTube in a new tab for best compatibility
+            const videoUrl = 'https://www.youtube.com/shorts/w8VGrPWz3oI';
+            window.open(videoUrl, '_blank', 'noopener,noreferrer');
+        });
+    }
 }
 
 // ============================================
