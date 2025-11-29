@@ -10,11 +10,16 @@
 /* Hero Carousel Styles */
 .hero-carousel {
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .hero-slide {
     opacity: 0;
     z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hero-slide.active {
@@ -25,6 +30,27 @@
 .hero-indicator.active {
     background-color: white !important;
     transform: scale(1.2);
+}
+
+/* Responsive Carousel for Mobile */
+@media (max-width: 640px) {
+    .hero-slide {
+        background-size: cover !important;
+        background-position: center !important;
+        width: 100vw !important;
+        height: 100vh !important;
+    }
+    
+    .hero-nav {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+        font-size: 0.875rem !important;
+    }
+    
+    .hero-indicator {
+        width: 0.5rem !important;
+        height: 0.5rem !important;
+    }
 }
 
 /* Smooth Scrolling */
@@ -182,6 +208,7 @@ html {
 .service-card {
     position: relative;
     overflow: hidden;
+    background: white;
 }
 
 .service-card::before {
@@ -193,10 +220,23 @@ html {
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.5s;
+    z-index: 5;
 }
 
 .service-card:hover::before {
     left: 100%;
+}
+
+/* Service Card Background Image Responsive */
+@media (max-width: 640px) {
+    .service-card {
+        min-height: 280px !important;
+    }
+    
+    .service-card .absolute {
+        background-size: cover !important;
+        background-position: center !important;
+    }
 }
 
 /* Navbar Scroll Effect */

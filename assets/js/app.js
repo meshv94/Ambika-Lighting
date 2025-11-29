@@ -531,23 +531,23 @@ function closeVideoModal() {
 function initTestimonials() {
     const testimonials = [
         {
-            name: 'Sandhya Godhse',
-            review: 'I Very Much thank to Prerakbhai. His Work was fabulous, Excellence, Pure & Perfect. No Words for his perfect on time Delivery for everything & specially I like his management & Pre arrangement. Superb work & Co-ordination. I am Very much happy & thankful to him for my Superb wedding. Thank You Very Much for Everything.',
+            name: 'સંધ્યા ગોધસે',
+            review: 'મને પ્રેરકભાઈનો ખૂબ આભાર છે. તેમનું કામ શાનદાર, ઉત્કૃષ્ટ, શુદ્ધ અને સંપૂર્ણ હતું. બધું સમયસર પહોંચાડવા માટે કોઈ શબ્દો નથી અને ખાસ કરીને મને તેમનું વ્યવસ્થાપન અને પૂર્વ-વ્યવસ્થા ગમી. ઉત્કૃષ્ટ કામ અને સંકલન. મારા શાનદાર લગ્ન માટે હું ખૂબ ખુશ અને આભારી છું. બધું માટે ખૂબ આભાર.',
             rating: 5
         },
         {
-            name: 'Atul J Shah',
-            review: 'We Got Free From all the Tensions after booking of Shriji Party Plot. They are Made a Program Very Successful as like Family member. Mr. Natubhai has received our guest for full day & celebrated our Events with gratefulness. Thank You for Everything.',
+            name: 'અતુલ જે. શાહ',
+            review: 'અંબિકા લાઇટિંગ બુક કર્યા પછી અમને બધી ચિંતાઓથી મુક્તિ મળી. તેમણે કાર્યક્રમને પરિવારના સભ્યની જેમ ખૂબ સફળ બનાવ્યો. દિવસભર અમારા મહેમાનોનું સ્વાગત કર્યું અને અમારા કાર્યક્રમોની ઉજવણી કરી. બધું માટે આભાર.',
             rating: 5
         },
         {
-            name: 'Kandarp S Patel',
-            review: 'I have booked Megha Farm for my daughter\'s marriage. We have asked him for catering they gave me the reference of shriji mandap & Decorators. I contacted by Mr. Lalabhai & did meet with him. Without thinking of other quilters and we directly booked shriji mandap. He has made a declaration before our timings 9-12-2017 my function.',
+            name: 'કંદર્પ એસ. પટેલ',
+            review: 'મેં મારી પુત્રીના લગ્ન માટે અંબિકા લાઇટિંગ બુક કર્યું હતું. અમે તેમને કેટરિંગ માટે પૂછ્યું ત્યારે તેમણે અંબિકા લાઇટિંગનો સંદર્ભ આપ્યો. મેં સંપર્ક કર્યો અને મળ્યો. અન્ય વિકલ્પો વિશે વિચાર્યા વગર અમે સીધા અંબિકા લાઇટિંગ બુક કર્યું. તેમણે અમારા સમય પહેલાં જ બધું તૈયાર કર્યું.',
             rating: 5
         },
         {
-            name: 'Dilip Pathak',
-            review: 'Experienced Good Nature & Coopration got from shreeji mandap & decoration.Suppliers & Staff is in Good Condition. Each & Every Material is new & Neat Clean is the Satisfaction thing.Conclude to join hand again with Mr. Prerakbhai for my next occassion. Thank you.',
+            name: 'દિલીપ પાઠક',
+            review: 'અંબિકા લાઇટિંગ અને સજાવટ પાસેથી સારો અનુભવ, સારી પ્રકૃતિ અને સહકાર મળ્યો. સપ્લાયર્સ અને સ્ટાફ સારી સ્થિતિમાં છે. દરેક સામગ્રી નવી અને સ્વચ્છ છે જે સંતોષની વસ્તુ છે. મારા આગામી પ્રસંગ માટે ફરીથી હાથ જોડવાનો નિષ્કર્ષ. આભાર.',
             rating: 5
         }
     ];
