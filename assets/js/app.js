@@ -222,22 +222,30 @@ function initGallery() {
     // Gallery data - Photos
     const photosData = [
         { src: 'https://i.ibb.co/yFrRtg6s/entry.jpg', category: 'gate', title: 'Entry Gate' },
+        { src: 'https://i.ibb.co/RGDmmJp0/Whats-App-Image-2025-11-29-at-10-26-53-PM.jpg', category: 'gate', title: 'Entry Gate' },
+        { src: 'https://i.ibb.co/21gFKd0G/Whats-App-Image-2025-11-29-at-10-32-34-PM-1.jpg', category: 'gate', title: 'Entry' },
+        { src: 'https://i.ibb.co/5gkCNKwN/Whats-App-Image-2025-11-29-at-10-40-29-PM.jpg', category: 'gate', title: 'Special Entry' },
         { src: 'https://i.ibb.co/VY3t8pPc/mandap-chori.jpg', category: 'mandap', title: 'Traditional Mandap' },
-        // { src: 'https://i.ibb.co/yFrRtg6s/entry.jpg', category: 'wedding', title: 'Wedding Stage' },
+        { src: 'https://i.ibb.co/4nGvpykF/Whats-App-Image-2025-11-29-at-10-27-08-PM.jpg', category: 'mandap', title: 'Chori' },
+        { src: 'https://i.ibb.co/Kzzv1ZN6/Whats-App-Image-2025-11-29-at-10-26-54-PM-1.jpg', category: 'Engagement', title: 'Engagement' },
+        { src: 'https://i.ibb.co/B2P3QCGd/Whats-App-Image-2025-11-29-at-10-32-36-PM.jpg', category: 'wedding', title: 'Wedding Stage' },
         { src: 'https://i.ibb.co/xtKqbXjz/stage.jpg', category: 'stage', title: 'Stage Decoration' },
         // { src: 'https://i.ibb.co/V0zCdVpK/reception.jpg', category: 'gate', title: 'Gate Decoration' },
         // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'lighting', title: 'Lighting Setup' },
-        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'stage', title: 'Stage Decoration' },
-        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'reception', title: 'Reception Setup' },
-        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'rasgarba', title: 'Rasgarba Event' },
-        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'mehndi', title: 'Mehndi Ceremony' },
-        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'wedding', title: 'Wedding Decoration' },
-        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'sangeet-garba', title: 'Sangeet Night' },
-        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'party-plot', title: 'Party Plot Setup' },
-        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'flower', title: 'Floral Arrangement' },
-        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'lighting', title: 'Ambient Lighting' },
-        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'mandap', title: 'Traditional Mandap' },
-        // { src: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800', category: 'reception', title: 'Reception Hall' },
+        { src: 'https://i.ibb.co/b5jB9w4z/Whats-App-Image-2025-11-29-at-10-32-37-PM.jpg', category: 'stage', title: 'Stage Decoration' },
+        { src: 'https://i.ibb.co/j9HVWXfK/Whats-App-Image-2025-11-29-at-10-32-30-PM.jpg', category: 'reception', title: 'Reception Setup' },
+        { src: 'https://i.ibb.co/fGpJCP1v/Whats-App-Image-2025-11-29-at-10-39-27-PM.jpg', category: 'reception', title: 'Reception Stage' },
+        { src: 'https://i.ibb.co/fY7Tz3T4/Whats-App-Image-2025-11-29-at-10-32-34-PM.jpg', category: 'rasgarba', title: 'Rasgarba Event' },
+        { src: 'https://i.ibb.co/ksHdyPSt/Whats-App-Image-2025-11-29-at-10-26-54-PM.jpg', category: 'mehndi', title: 'Mehndi Ceremony' },
+        { src: 'https://i.ibb.co/HyxVXFZ/Whats-App-Image-2025-11-29-at-10-27-09-PM.jpg', category: 'mehndi', title: 'Mehndi Ceremony' },
+        { src: 'https://i.ibb.co/991xtVP4/Whats-App-Image-2025-11-29-at-10-32-34-PM-2.jpg', category: 'wedding', title: 'Wedding Decoration' },
+        { src: 'https://i.ibb.co/s9zvZXvN/Whats-App-Image-2025-11-29-at-10-54-34-PM.jpg', category: 'sangeet-garba', title: 'Sangeet Night' },
+        { src: 'https://i.ibb.co/BKGq6rhk/Whats-App-Image-2025-11-29-at-6-39-10-PM.jpg', category: 'party-plot', title: 'Party Plot Setup' },
+        { src: 'https://i.ibb.co/chXy0kNk/Whats-App-Image-2025-11-29-at-10-32-44-PM.jpg', category: 'flower', title: 'Floral Arrangement' },
+        { src: 'https://i.ibb.co/3m4BqTGq/Whats-App-Image-2025-11-29-at-6-39-08-PM.jpg', category: 'flower', title: 'Floral Arrangement' },
+        { src: 'https://i.ibb.co/sJ1kW0Kf/Whats-App-Image-2025-11-29-at-10-54-35-PM.jpg', category: 'lighting', title: 'Ambient Lighting' },
+        { src: 'https://i.ibb.co/k2Lp7ZQX/Whats-App-Image-2025-11-29-at-10-40-28-PM.jpg', category: 'mandap', title: 'Traditional Mandap' },
+        { src: 'https://i.ibb.co/V0zCdVpK/reception.jpg', category: 'reception', title: 'Reception Stage' },
     ];
     
     // Gallery data - Videos
@@ -298,11 +306,37 @@ function createGalleryItem(item, type, index) {
         `;
         div.addEventListener('click', () => openLightbox(item.src, item.title, index, 'photo'));
     } else {
+        // Extract YouTube video ID for thumbnail
+        let videoId = '';
+        if (item.src.includes('youtube.com/embed/')) {
+            videoId = item.src.split('youtube.com/embed/')[1].split('?')[0];
+        } else if (item.src.includes('youtube.com/watch?v=')) {
+            videoId = item.src.split('v=')[1].split('&')[0];
+        } else if (item.src.includes('youtu.be/')) {
+            videoId = item.src.split('youtu.be/')[1].split('?')[0];
+        } else if (item.src.includes('youtube.com/shorts/')) {
+            videoId = item.src.split('youtube.com/shorts/')[1].split('?')[0].split('/')[0];
+        }
+
+        const thumbnailUrl = videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : '';
+
         div.innerHTML = `
             <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-500 cursor-pointer">
                 <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-                        <i class="fas fa-play-circle text-white text-6xl opacity-80 group-hover:opacity-100 transition-opacity"></i>
+                    ${thumbnailUrl ? `
+                        <img src="${thumbnailUrl}" alt="${item.title}" class="w-full h-full object-cover" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 hidden items-center justify-center">
+                            <i class="fas fa-play-circle text-white text-6xl opacity-80"></i>
+                        </div>
+                    ` : `
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                            <i class="fas fa-play-circle text-white text-6xl opacity-80"></i>
+                        </div>
+                    `}
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                            <i class="fas fa-play text-white text-3xl ml-1"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">

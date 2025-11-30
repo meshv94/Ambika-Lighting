@@ -390,6 +390,29 @@ html {
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+/* Scroll Down Animation */
+@keyframes scroll-down {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+}
+
+.animate-scroll-down {
+    animation: scroll-down 2s ease-in-out infinite;
+}
+
 /* Mobile Menu Animation */
 #mobileMenu {
     animation: slideIn 0.3s ease-out;
