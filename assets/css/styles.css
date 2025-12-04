@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.font-gujarati {
+    font-family: 'Mukta Vaani', sans-serif;
+}
+
 /* Hero Carousel Styles */
 .hero-carousel {
     position: relative;

@@ -662,11 +662,11 @@ function initTestimonials() {
                 <div class="flex items-center justify-center mb-4">
                     ${generateStars(testimonial.rating)}
                 </div>
-                <p class="text-gray-600 text-lg leading-relaxed mb-6 text-center italic">
+                <p class="text-gray-600 text-lg leading-relaxed mb-6 text-center italic font-gujarati">
                     "${testimonial.review}"
                 </p>
                 <div class="text-center">
-                    <h4 class="text-xl font-bold text-gray-800 font-playfair">${testimonial.name}</h4>
+                    <h4 class="text-xl font-bold text-gray-800 font-gujarati">${testimonial.name}</h4>
                 </div>
             </div>
         `;
